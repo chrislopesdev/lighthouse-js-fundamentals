@@ -136,20 +136,36 @@
 
 // looping lastIndexOf
 
-const lastIndexOf = function (arr, value) {
-  let index;
-  let length = arr.length-1;
-  for (let i = length; i >= 0; i--) {
-    // console.log(arr[i], value, i);
-    if (arr[i] === value) {
-      return i;
-    }
-  }
-  return -1;
+// const lastIndexOf = function (arr, value) {
+//   let index;
+//   let length = arr.length-1;
+//   for (let i = length; i >= 0; i--) {
+//     // console.log(arr[i], value, i);
+//     if (arr[i] === value) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+// console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 1), "=?", 3);
+// console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 2), "=?", 4);
+// console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 3), "=?", -1);
+// console.log(lastIndexOf([ 5, 5, 5 ], 5), "=?", 2);
+// console.log(lastIndexOf([], 3), "=?", -1);
+
+
+// concat array assignment
+
+const concat = function(arr1, arr2) {
+  // console.log(arr1);
+  // console.log(arr2);
+  let concatArray = [];
+  concatArray = arr1.concat(arr2);
+  return concatArray;
 }
 
-console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 1), "=?", 3);
-console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 2), "=?", 4);
-console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 3), "=?", -1);
-console.log(lastIndexOf([ 5, 5, 5 ], 5), "=?", 2);
-console.log(lastIndexOf([], 3), "=?", -1);
+console.log(concat([ 1, 2, 3 ], [ 4, 5, 6 ]), "=?", [ 1, 2, 3, 4, 5, 6 ]);
+console.log(concat([ 0, 3, 1 ], [ 9, 7, 2 ]), "=?", [ 0, 3, 1, 9, 7, 2 ]);
+console.log(concat([], [ 9, 7, 2 ]), "=?", [ 9, 7, 2 ]);
+console.log(concat([ 5, 10 ], []), "=?", [ 5, 10 ]);
