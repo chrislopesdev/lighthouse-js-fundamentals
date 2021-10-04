@@ -112,24 +112,44 @@
 
 // looping range
 
-const range = function (start, end, step) {
-  let numbers = [];
-  // console.log(start);
-  // console.log(end);
-  // console.log(step);
-  if (start === undefined || start > end || end === undefined || step === undefined || step <= 0) {
-    return numbers = [];
-    // console.log("Please enter valid numbers") 
-  } else {
-    for (let i = start; i <= end; i = i + step) {
-      numbers.push(i);
+// const range = function (start, end, step) {
+//   let numbers = [];
+//   // console.log(start);
+//   // console.log(end);
+//   // console.log(step);
+//   if (start === undefined || start > end || end === undefined || step === undefined || step <= 0) {
+//     return numbers = [];
+//     // console.log("Please enter valid numbers") 
+//   } else {
+//     for (let i = start; i <= end; i = i + step) {
+//       numbers.push(i);
+//     }
+//     return numbers;
+//     // console.log("These numbers are valid")
+//   }
+// }
+
+// console.log(range(0, 10, 2));
+// console.log(range(10, 30, 5));
+// console.log(range(-5, 2, 3));
+
+
+// looping lastIndexOf
+
+const lastIndexOf = function (arr, value) {
+  let index;
+  let length = arr.length-1;
+  for (let i = length; i >= 0; i--) {
+    // console.log(arr[i], value, i);
+    if (arr[i] === value) {
+      return i;
     }
-    return numbers;
-    // console.log("These numbers are valid")
   }
+  return -1;
 }
 
-console.log(range(0, 10, 2));
-console.log(range(10, 30, 5));
-console.log(range(-5, 2, 3));
-
+console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 1), "=?", 3);
+console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 2), "=?", 4);
+console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 3), "=?", -1);
+console.log(lastIndexOf([ 5, 5, 5 ], 5), "=?", 2);
+console.log(lastIndexOf([], 3), "=?", -1);
