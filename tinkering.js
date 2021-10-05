@@ -169,3 +169,30 @@ console.log(concat([ 1, 2, 3 ], [ 4, 5, 6 ]), "=?", [ 1, 2, 3, 4, 5, 6 ]);
 console.log(concat([ 0, 3, 1 ], [ 9, 7, 2 ]), "=?", [ 0, 3, 1, 9, 7, 2 ]);
 console.log(concat([], [ 9, 7, 2 ]), "=?", [ 9, 7, 2 ]);
 console.log(concat([ 5, 10 ], []), "=?", [ 5, 10 ]);
+
+
+const concat = function(arr1, arr2) {
+  // console.log(arr1);
+  // console.log(arr2);
+  let concatArray = [];
+  concatArray = arr1.concat(arr2);
+  return concatArray;
+}
+
+
+// "forEach()" over array
+
+// This is an array of objects. 
+var donuts = [
+  { type: "Jelly", cost: 1.22 },
+  { type: "Chocolate", cost: 2.45 },
+  { type: "Cider", cost: 1.59 },
+  { type: "Boston Cream", cost: 5.99 }
+];
+
+// your code goes here; 
+function donutCost (donuts) {
+  console.log(`${donuts.type} donuts cost $${donuts.cost} each`)
+}
+
+donuts.forEach(donutCost);
