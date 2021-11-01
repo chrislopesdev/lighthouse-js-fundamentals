@@ -5,6 +5,7 @@
 ### Heading 3
 
 **This is bold text**
+
 _This is italicized_
 
 1. List item 1
@@ -21,14 +22,14 @@ _This is italicized_
 > multi-line
 > blockquote.
 
-#Links
+# Links
 `[Link Text](URL)`
 or
 `[Link Text][ref1]`
 Some text. This format is good for reference.
 `[ref1]: <url>`
 
-#Images
+# Images
 `![Alt Text](url)`
 
 ```
